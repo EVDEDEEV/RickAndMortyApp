@@ -8,7 +8,7 @@ import my.project.rickandmorty.data.models.CharacterListModel
 import my.project.rickandmorty.data.repository.Repository
 import retrofit2.Response
 
-class SharedViewModel(val repository: Repository) : ViewModel() {
+class SharedViewModel(private val repository: Repository) : ViewModel() {
 
     var listCharacters = MutableLiveData<Response<CharacterListModel>>()
     var filterValue = MutableLiveData<Array<Int>>()
