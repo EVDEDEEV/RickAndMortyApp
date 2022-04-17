@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="190dp"
-    app:cardCornerRadius="8dp"
     android:layout_marginStart="18dp"
+    android:layout_marginTop="16dp"
     android:layout_marginEnd="18dp"
-    android:layout_marginTop="16dp">
+    app:cardCornerRadius="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -42,17 +42,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:fontFamily="@font/engfont"
                 android:textAlignment="center"
+                android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textColor = "@color/white"
-                tools:text="133" />
+                tools:text="" />
         </androidx.cardview.widget.CardView>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/item_background"
             android:orientation="vertical"
-            android:background="@color/green_blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -64,24 +65,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
                 android:layout_marginTop="8dp"
-                tools:text=""
-                android:textStyle="bold"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/engfont"
+                android:maxLines="2"
                 android:textSize="16sp"
-                android:maxLines="2" />
+                android:textStyle="bold"
+                tools:text="2222" />
 
             <TextView
                 android:id="@+id/txt_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Unknown"
                 android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
                 android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
                 android:layout_marginBottom="8dp"
+                android:fontFamily="@font/engfont"
                 android:textSize="12sp"
-                />
+                tools:text="Unknown" />
 
         </LinearLayout>
 

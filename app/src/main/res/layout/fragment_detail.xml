@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".presentation.fragments.detail.DetailFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="32dp"
-        android:background="@drawable/painel"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/layout_bg"
+        android:backgroundTint="@color/detail_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -18,54 +22,49 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.59000003">
 
+
         <TextView
             android:id="@+id/txt_episodes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/font"
             android:text="@string/title_episodes"
-            style="@style/TextColor"
+            android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.65"
-            app:layout_constraintStart_toEndOf="@+id/txt_titulo_origin"
-            app:layout_constraintTop_toBottomOf="@+id/txt_gender"
-            app:layout_constraintVertical_bias="0.23000002" />
+            app:layout_constraintBottom_toTopOf="@+id/txt_titulo_origin"
+            app:layout_constraintStart_toStartOf="@+id/txt_titulo_origin" />
 
         <TextView
             android:id="@+id/txt_n_episodes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/TextColor"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/font"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/txt_episodes"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.55"
             app:layout_constraintStart_toEndOf="@+id/txt_episodes"
             app:layout_constraintTop_toTopOf="@+id/txt_episodes"
-            tools:text="42" />
+            tools:text="2" />
 
         <TextView
             android:id="@+id/txt_gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/TextColor"
+            android:fontFamily="@font/engfont"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/txt_n_episodes"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.07"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.66"
-            tools:text="Genderless" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_specie"
+            tools:text="222" />
 
         <TextView
             android:id="@+id/txt_titulo_origin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/font"
             android:text="@string/title_origin"
-            style="@style/TextColor"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -73,7 +72,7 @@
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.81" />
+            app:layout_constraintVertical_bias="0.72" />
 
         <TextView
             android:id="@+id/txt_origin"
@@ -81,8 +80,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
-            android:maxLines="1"
-            style="@style/TextColor"
+            android:fontFamily="@font/engfont"
+            android:maxLines="2"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.1"
@@ -95,8 +94,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:fontFamily="@font/font"
             android:text="@string/title_location"
-            style="@style/TextColor"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/txt_origin"
@@ -108,8 +107,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
-            android:maxLines="1"
-            style="@style/TextColor"
+            android:fontFamily="@font/engfont"
+            android:maxLines="2"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.1"
@@ -121,7 +120,8 @@
             android:id="@+id/txt_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/TextColor"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/engfont"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -133,10 +133,24 @@
             tools:text="Unknown" />
 
         <TextView
+            android:id="@+id/txt_id_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/font"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txt_id_character"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.064"
+            tools:text="id" />
+
+        <TextView
             android:id="@+id/txt_id_character"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/TextColor"
+            android:fontFamily="@font/font"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -165,10 +179,11 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
+            android:fontFamily="@font/engfont"
             android:maxLines="2"
-            android:textSize="20sp"
-            style="@style/TextColor"
             android:textAlignment="center"
+
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -178,19 +193,19 @@
 
         <TextView
             android:id="@+id/txt_specie"
-            style="@style/TextColor"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="24dp"
+            android:fontFamily="@font/engfont"
             android:textAlignment="center"
             android:textAllCaps="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_name"
-            tools:text="" />
+            tools:text="HUMAN" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

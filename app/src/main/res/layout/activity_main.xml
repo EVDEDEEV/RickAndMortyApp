@@ -23,5 +23,4 @@
         app:navGraph="@navigation/nav_app" />
 
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>

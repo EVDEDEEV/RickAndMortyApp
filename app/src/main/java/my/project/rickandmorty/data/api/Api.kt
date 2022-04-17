@@ -15,7 +15,7 @@ object Api {
 
     }
 
-    val api:ApiInterface by lazy {
+    val api: ApiInterface by lazy {
         retrofit.create(ApiInterface::class.java)
     }
 

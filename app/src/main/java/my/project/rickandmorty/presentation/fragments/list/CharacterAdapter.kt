@@ -12,19 +12,19 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
 
     private var listCharacters = emptyList<CharacterModel>()
 
-    class CharacterViewHolder(val binding: ItemListBinding): RecyclerView.ViewHolder(binding.root) {
+    class CharacterViewHolder(val binding: ItemListBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(character: CharacterModel) {
             binding.txtIdCharacter.text = character.id.toString()
             binding.txtNameCharacter.text = character.name
             Picasso.get().load(character.image).into(binding.characterImg)
             binding.txtStatus.text = character.status
 
-            itemView.setOnClickListener {view ->
+            itemView.setOnClickListener { view ->
                 val action = ListFragmentDirections.actionListFragmentToDetailFragment(character)
                 view.findNavController().navigate(action)
             }
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {

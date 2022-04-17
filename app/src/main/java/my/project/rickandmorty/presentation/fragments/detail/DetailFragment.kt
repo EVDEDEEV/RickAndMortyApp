@@ -12,7 +12,7 @@ import my.project.rickandmorty.databinding.FragmentDetailBinding
 
 class DetailFragment : Fragment() {
 
-    private var _binding:FragmentDetailBinding? = null
+    private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
 
     private val args: DetailFragmentArgs by navArgs()
@@ -20,7 +20,7 @@ class DetailFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         _binding = FragmentDetailBinding.inflate(inflater, container, false)
         return binding.root
@@ -41,8 +41,7 @@ class DetailFragment : Fragment() {
             txtNEpisodes.text = character.episode.size.toString()
             txtOrigin.text = character.origin.name
             txtLocation.text = character.location.name
-
-
+            txtIdCount.text = "ID"
         }
     }
 
@@ -50,6 +49,5 @@ class DetailFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 
 }

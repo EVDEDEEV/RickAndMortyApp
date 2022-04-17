@@ -3,10 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1315" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/background_button.xml" value="0.13" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/background_filter.xml" value="0.13" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/background_search.xml" value="0.1745" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/checkbox_female_selector.xml" value="0.13" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/description.xml" value="0.1" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/ic_card_genderless.xml" value="0.1" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/ic_card_genderless_unchecked.xml" value="0.1" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/ic_card_male.xml" value="0.1" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/ic_card_unknown.xml" value="0.1" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/ic_card_unknown_unchecked.xml" value="0.1" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/ic_filter.xml" value="0.1315" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1315" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1315" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/layout_bg.xml" value="0.1315" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/splash_screen_backgroud.xml" value="0.1315" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/font/font.xml" value="0.2421875" />
         <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/layout/activity_main.xml" value="0.2296875" />
-        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/layout/fragment_detail.xml" value="0.1" />
-        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/layout/fragment_list.xml" value="0.2296875" />
-        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/layout/item_list.xml" value="0.2296875" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/layout/fragment_detail.xml" value="0.264" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/layout/fragment_list.xml" value="0.4" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/layout/item_list.xml" value="0.4" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/menu/bottom_menu.xml" value="0.22395833333333334" />
       </map>
     </option>
   </component>
