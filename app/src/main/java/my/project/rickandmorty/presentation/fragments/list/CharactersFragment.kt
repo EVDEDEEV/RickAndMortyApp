@@ -14,6 +14,7 @@ import my.project.rickandmorty.data.repository.Repository
 import my.project.rickandmorty.databinding.FragmentCharactersBinding
 import my.project.rickandmorty.presentation.viewModel.SharedViewModelFactory
 
+
 typealias OnCharacterClicked = (CharacterModel) -> Unit
 
 class CharactersFragment : Fragment() {
@@ -29,6 +30,7 @@ class CharactersFragment : Fragment() {
         view?.findNavController()?.navigate(action)
 
     }
+
     private val adapter = CharacterAdapter(onClick)
 
     override fun onAttach(context: Context) {
@@ -45,7 +47,6 @@ class CharactersFragment : Fragment() {
         return binding?.root
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -55,7 +56,6 @@ class CharactersFragment : Fragment() {
                     response.body()?.let { body ->
                         adapter.setCharacters(body.results)
                     }
-
                 } else {
                     Toast.makeText(context, "Data load error", Toast.LENGTH_SHORT).show()
                 }
@@ -65,13 +65,13 @@ class CharactersFragment : Fragment() {
     }
 
     private fun getCharactersFromViewModel() {
-        sharedViewModel.getCharacters(1)
+        val randomPage = (1..42).random()
+        sharedViewModel.getCharacters(randomPage)
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }
 

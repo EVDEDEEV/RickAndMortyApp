@@ -14,9 +14,11 @@ class SharedViewModel(private val repository: Repository) : ViewModel() {
     val listCharacters = MutableLiveData<Response<CharacterListModel>>()
 
     fun getCharacters(page: Int) {
+
         viewModelScope.launch(Dispatchers.IO) {
             val characters = repository.getCharacters(page)
             listCharacters.postValue(characters)
         }
     }
 }
+
