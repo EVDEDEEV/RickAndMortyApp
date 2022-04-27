@@ -2,35 +2,36 @@ package my.project.rickandmorty.presentation.fragments.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import my.project.rickandmorty.data.models.CharacterModel
-import my.project.rickandmorty.databinding.ItemListBinding
+import my.project.rickandmorty.databinding.ItemCharacterBinding
 
-class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>() {
+class CharacterAdapter(val onClick: OnCharacterClicked) :
+    RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>() {
 
     private var listCharacters = emptyList<CharacterModel>()
 
-    class CharacterViewHolder(val binding: ItemListBinding) :
+    class CharacterViewHolder(
+        private val binding: ItemCharacterBinding,
+        val onClick: OnCharacterClicked,
+    ) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(character: CharacterModel) {
             binding.txtIdCharacter.text = character.id.toString()
-            binding.txtNameCharacter.text = character.name
+            binding.textNameCharacter.text = character.name
             Picasso.get().load(character.image).into(binding.characterImg)
-            binding.txtStatus.text = character.status
-
+            binding.textStatus.text = character.status
             itemView.setOnClickListener { view ->
-                val action = ListFragmentDirections.actionListFragmentToDetailFragment(character)
-                view.findNavController().navigate(action)
+                onClick.invoke(character)
             }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val binding = ItemListBinding.inflate(layoutInflater, parent, false)
-        return CharacterViewHolder(binding)
+        val binding = ItemCharacterBinding.inflate(layoutInflater, parent, false)
+        return CharacterViewHolder(binding, onClick)
     }
 
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {

@@ -8,22 +8,28 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import androidx.navigation.findNavController
+import my.project.rickandmorty.data.models.CharacterModel
 import my.project.rickandmorty.data.repository.Repository
-import my.project.rickandmorty.databinding.FragmentListBinding
-import my.project.rickandmorty.presentation.viewModel.SharedViewModel
+import my.project.rickandmorty.databinding.FragmentCharactersBinding
 import my.project.rickandmorty.presentation.viewModel.SharedViewModelFactory
 
-class ListFragment : Fragment() {
+typealias OnCharacterClicked = (CharacterModel) -> Unit
 
-    private var _binding: FragmentListBinding? = null
-    private val binding get() = _binding!!
+class CharactersFragment : Fragment() {
+
+    private var _binding: FragmentCharactersBinding? = null
+    private val binding get() = _binding
     private val sharedViewModel: SharedViewModel by activityViewModels {
         SharedViewModelFactory(
             Repository())
     }
-    private var adapter = CharacterAdapter()
+    private val onClick: OnCharacterClicked = { character ->
+        val action = CharactersFragmentDirections.actionListFragmentToDetailFragment(character)
+        view?.findNavController()?.navigate(action)
 
+    }
+    private val adapter = CharacterAdapter(onClick)
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -35,31 +41,28 @@ class ListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        _binding = FragmentListBinding.inflate(inflater, container, false)
-        return binding.root
+        _binding = FragmentCharactersBinding.inflate(inflater, container, false)
+        return binding?.root
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.apply {
+        binding?.apply {
             sharedViewModel.listCharacters.observe(viewLifecycleOwner) { response ->
                 if (response.isSuccessful) {
-                    adapter.setCharacters(response.body()!!.results)
+                    response.body()?.let { body ->
+                        adapter.setCharacters(body.results)
+                    }
 
                 } else {
                     Toast.makeText(context, "Data load error", Toast.LENGTH_SHORT).show()
                 }
             }
-            recyclerview.layoutManager =
-                StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-//            recyclerview.layoutManager = LinearLayoutManager(context)
             recyclerview.adapter = adapter
-//            StaggeredGridLayoutManager
         }
     }
-
 
     private fun getCharactersFromViewModel() {
         sharedViewModel.getCharacters(1)

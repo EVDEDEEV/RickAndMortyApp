@@ -21,8 +21,10 @@
         <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/drawable/splash_screen_backgroud.xml" value="0.1315" />
         <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/font/font.xml" value="0.2421875" />
         <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/layout/activity_main.xml" value="0.2296875" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/layout/fragment_characters.xml" value="0.264" />
         <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/layout/fragment_detail.xml" value="0.264" />
         <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/layout/fragment_list.xml" value="0.4" />
+        <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/layout/item_character.xml" value="0.23854166666666668" />
         <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/layout/item_list.xml" value="0.4" />
         <entry key="..\:/Android Projects/RickAndMortyApp/app/src/main/res/menu/bottom_menu.xml" value="0.22395833333333334" />
       </map>

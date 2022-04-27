@@ -5,14 +5,14 @@
     android:id="@+id/titleCharacters"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.fragments.list.ListFragment">
+    tools:context=".presentation.fragments.list.CharactersFragment">
 
 
     <TextView
         android:id="@+id/title_character"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="35dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/font"
         android:text="@string/title_characters"
@@ -32,13 +32,12 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_character"
-        tools:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-        tools:listitem="@layout/item_list"
+        app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        tools:listitem="@layout/item_character"
         tools:orientation="vertical"
-        tools:spanCount="2">
+        app:spanCount="2">
 
     </androidx.recyclerview.widget.RecyclerView>
 

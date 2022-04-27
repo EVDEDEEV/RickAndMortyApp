@@ -35,7 +35,7 @@
             app:layout_constraintStart_toStartOf="@+id/txt_titulo_origin" />
 
         <TextView
-            android:id="@+id/txt_n_episodes"
+            android:id="@+id/text_n_episodes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -48,15 +48,15 @@
             tools:text="2" />
 
         <TextView
-            android:id="@+id/txt_gender"
+            android:id="@+id/text_gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/engfont"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_n_episodes"
+            app:layout_constraintBottom_toTopOf="@+id/text_n_episodes"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_specie"
+            app:layout_constraintTop_toBottomOf="@+id/text_specie"
             tools:text="222" />
 
         <TextView
@@ -75,7 +75,7 @@
             app:layout_constraintVertical_bias="0.72" />
 
         <TextView
-            android:id="@+id/txt_origin"
+            android:id="@+id/text_origin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -98,11 +98,11 @@
             android:text="@string/title_location"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/txt_origin"
-            app:layout_constraintTop_toBottomOf="@+id/txt_origin" />
+            app:layout_constraintStart_toStartOf="@+id/text_origin"
+            app:layout_constraintTop_toBottomOf="@+id/text_origin" />
 
         <TextView
-            android:id="@+id/txt_location"
+            android:id="@+id/text_location"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -117,7 +117,7 @@
             tools:text="Testicle Monster Dimension" />
 
         <TextView
-            android:id="@+id/txt_status"
+            android:id="@+id/text_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -133,10 +133,10 @@
             tools:text="Unknown" />
 
         <TextView
-            android:id="@+id/txt_id_count"
+            android:id="@+id/text_id_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
             android:fontFamily="@font/font"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -144,7 +144,8 @@
             app:layout_constraintEnd_toStartOf="@+id/txt_id_character"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.064"
-            tools:text="id" />
+            android:textAllCaps="true"
+            android:text="@string/id" />
 
         <TextView
             android:id="@+id/txt_id_character"
@@ -165,15 +166,15 @@
             android:id="@+id/img_character"
             android:layout_width="220dp"
             android:layout_height="220dp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_gender"
+            app:layout_constraintBottom_toTopOf="@+id/text_gender"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_status"
+            app:layout_constraintTop_toBottomOf="@+id/text_status"
             app:layout_constraintVertical_bias="0.3" />
 
         <TextView
-            android:id="@+id/txt_name"
+            android:id="@+id/text_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -192,7 +193,7 @@
             tools:text="" />
 
         <TextView
-            android:id="@+id/txt_specie"
+            android:id="@+id/text_specie"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -204,7 +205,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_name"
+            app:layout_constraintTop_toBottomOf="@+id/text_name"
             tools:text="HUMAN" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
