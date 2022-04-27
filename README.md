@@ -13,5 +13,5 @@ Project structure:
 Also tried to make this app using MVVM pattern, 
 For navigation between fragments used androidx.navigation library
 
-Video Preview: [Google Drive link](drive.google.com/file/d/1ovpkZ9hLA7DtrViNSBntKF6tNwjl2vPv/view?usp=sharing)
+Video Preview: [Google Drive link](https://drive.google.com/file/d/1ovpkZ9hLA7DtrViNSBntKF6tNwjl2vPv/view?usp=sharing)
 
