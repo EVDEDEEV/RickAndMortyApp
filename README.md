@@ -1,6 +1,6 @@
 # RickAndMortyApp
 
-App for practice work with API rickandmortyapi.com.
+App for practice work with API rickandmortyapi.com. Data downloads from API by Retfrofit and put it into RecyclerView list on first fragment. When tapping on a character from list, there is a transition to the second fragment with detailed information about the character
 
 <h3>Used technologies:</h1>
 <ul> 
