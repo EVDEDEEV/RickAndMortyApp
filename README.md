@@ -3,7 +3,7 @@
 App for practice work with API rickandmortyapi.com.
 
 Used technologies: 
-<ul> Retrofit,
+<ul> Retrofit<ul>
 Coroutines,
 Picasso
 
