@@ -15,3 +15,4 @@ For navigation between fragments used androidx.navigation library
 
 Video Preview: [Google Drive link](https://drive.google.com/file/d/1ovpkZ9hLA7DtrViNSBntKF6tNwjl2vPv/view?usp=sharing)
 
+![image](https://user-images.githubusercontent.com/94930087/165645352-658e6de5-8234-4b25-87d2-f75ff51ffd29.png)
