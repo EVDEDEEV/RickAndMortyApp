@@ -23,5 +23,6 @@ App for practice work with API rickandmortyapi.com. Data downloads from API by R
 <h3>Video Preview:</h3> Google Drive link https://drive.google.com/file/d/1ovpkZ9hLA7DtrViNSBntKF6tNwjl2vPv/view?usp=sharing
 
 <h3>Screenshots:</h3>
-  
-![R M2](https://user-images.githubusercontent.com/94930087/165647748-84f38680-c515-40cf-8bcc-0af5761c4a08.png) 
+
+![image](https://user-images.githubusercontent.com/94930087/165650797-da1edc69-6792-4cb8-8eb6-142598eaf23d.png)
+
