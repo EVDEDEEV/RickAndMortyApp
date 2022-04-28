@@ -18,7 +18,7 @@ class CharacterAdapter(val onClick: OnCharacterClicked) :
     ) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(character: CharacterModel) {
-            binding.txtIdCharacter.text = character.id.toString()
+            binding.textIdCharacter.text = character.id.toString()
             binding.textNameCharacter.text = character.name
             Picasso.get().load(character.image).into(binding.characterImg)
             binding.textStatus.text = character.status
